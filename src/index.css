@@ -1,0 +1,147 @@
+@import url('https://api.fontshare.com/v2/css?f[]=clash-display@600,700,800&f[]=space-grotesk@400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    cursor: default;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold tracking-tight;
+  }
+
+  ::selection {
+    @apply bg-creative-500/20 text-creative-900;
+  }
+}
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  @apply bg-gray-50 text-gray-900 antialiased;
+}
+
+.creative-gradient {
+  background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%);
+}
+
+.glass-effect {
+  @apply backdrop-blur-xl bg-white/80 border border-white/20;
+}
+
+.hover-scale {
+  @apply transition-all duration-500 ease-out hover:scale-[1.02] hover:shadow-2xl;
+}
+
+.section-fade {
+  @apply opacity-0 translate-y-4;
+  animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    @apply opacity-100 translate-y-0;
+  }
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-creative-600 to-accent-600 font-display;
+}
+
+.card-shadow {
+  @apply shadow-xl shadow-creative-500/5 hover:shadow-2xl hover:shadow-creative-500/10 transition-all duration-500;
+}
+
+.button-primary {
+  @apply inline-flex items-center justify-center px-8 py-4 rounded-full 
+         bg-gradient-to-r from-creative-600 to-accent-600 text-white font-medium 
+         transition-all duration-500 hover:scale-105
+         shadow-lg shadow-creative-500/25 hover:shadow-xl hover:shadow-creative-500/30
+         focus:outline-none focus:ring-2 focus:ring-creative-500 focus:ring-offset-2;
+}
+
+.button-secondary {
+  @apply inline-flex items-center justify-center px-8 py-4 rounded-full 
+         border border-gray-200 bg-white/80 backdrop-blur-sm text-gray-800 font-medium 
+         transition-all duration-500 hover:scale-105 hover:border-creative-500 hover:text-creative-600
+         shadow-lg shadow-gray-200/50 hover:shadow-xl hover:shadow-creative-200/30
+         focus:outline-none focus:ring-2 focus:ring-creative-500 focus:ring-offset-2;
+}
+
+.nav-link {
+  @apply text-gray-600 hover:text-creative-600 transition-colors duration-300;
+}
+
+.section-padding {
+  @apply py-32 md:py-40;
+}
+
+.container-custom {
+  @apply max-w-7xl mx-auto px-6 sm:px-8 lg:px-12;
+}
+
+.creative-blur {
+  @apply absolute blur-3xl opacity-30 animate-pulse-slow;
+  background: radial-gradient(circle at center, theme('colors.creative.500') 0%, transparent 70%);
+}
+
+.magnetic-button {
+  @apply relative inline-block transition-transform duration-300 ease-out;
+  transform-style: preserve-3d;
+}
+
+.creative-cursor {
+  @apply fixed w-8 h-8 rounded-full pointer-events-none z-50 mix-blend-difference;
+  background: theme('colors.creative.500');
+  transition: transform 0.2s ease-out;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-creative-500/50 rounded-full hover:bg-creative-500;
+}
+
+/* Creative Animations */
+.hover-lift {
+  @apply transition-all duration-500 ease-out;
+  transform: translateY(0);
+}
+
+.hover-lift:hover {
+  transform: translateY(-10px) scale(1.02);
+  @apply shadow-xl shadow-creative-500/20;
+}
+
+.text-outline {
+  -webkit-text-stroke: 1px theme('colors.creative.500');
+  color: transparent;
+}
+
+.creative-shape {
+  @apply absolute w-64 h-64 rounded-full opacity-20 blur-3xl;
+  background: linear-gradient(45deg, theme('colors.creative.500'), theme('colors.accent.500'));
+  animation: morphShape 20s ease-in-out infinite;
+}
+
+@keyframes morphShape {
+  0%, 100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+}
