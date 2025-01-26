@@ -24,7 +24,7 @@
 
 body {
   font-family: 'Space Grotesk', sans-serif;
-  @apply bg-gray-50 text-gray-900 antialiased;
+  @apply bg-white dark:bg-gray-900 text-gray-900 dark:text-white antialiased;
 }
 
 .creative-gradient {
@@ -32,7 +32,7 @@ body {
 }
 
 .glass-effect {
-  @apply backdrop-blur-xl bg-white/80 border border-white/20;
+  @apply backdrop-blur-xl bg-white/80 dark:bg-gray-800/80 border border-white/20 dark:border-gray-700/20;
 }
 
 .hover-scale {

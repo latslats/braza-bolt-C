@@ -21,6 +21,26 @@ const services = [
     title: 'Motion Design',
     description: 'Bringing ideas to life through animation',
   },
+  {
+    icon: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=400&q=80',
+    title: 'UI/UX Design',
+    description: 'Crafting intuitive and user-centered digital interfaces',
+  },
+  {
+    icon: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=400&q=80',
+    title: 'Digital Marketing',
+    description: 'Strategic campaigns that drive growth and engagement',
+  },
+  {
+    icon: 'https://images.unsplash.com/photo-1553484771-047a44eee27f?auto=format&fit=crop&w=400&q=80',
+    title: '3D Visualization',
+    description: 'Creating stunning 3D models and immersive environments',
+  },
+  {
+    icon: 'https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=400&q=80',
+    title: 'App Development',
+    description: 'Building powerful mobile and web applications',
+  },
 ]
 
 const container = {
@@ -72,7 +92,7 @@ export default function Services() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
+          className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
         >
           {services.map((service, index) => (
             <motion.div

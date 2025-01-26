@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import Stats from './Stats'
 
 export default function Hero() {
   return (
@@ -64,6 +65,14 @@ export default function Hero() {
                 className="relative z-10 w-full h-full object-cover rounded-[2rem] shadow-2xl"
               />
             </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.6 }}
+          >
+            <Stats />
           </motion.div>
         </div>
       </div>
