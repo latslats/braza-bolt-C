@@ -4,6 +4,7 @@ import Hero from './components/Hero'
 import Services from './components/Services'
 import Featured from './components/Featured'
 import Testimonials from './components/Testimonials'
+import BlogPreview from './components/BlogPreview'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 
@@ -34,6 +35,7 @@ export default function App() {
         <Services />
         <Featured />
         <Testimonials />
+        <BlogPreview />
         <Contact />
       </main>
       <Footer />

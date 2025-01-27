@@ -68,7 +68,7 @@ const item = {
 
 export default function Services() {
   return (
-    <section className="section-padding bg-gray-50 relative overflow-hidden">
+    <section id="services" className="section-padding bg-gray-50 relative overflow-hidden">
       <div className="creative-shape top-0 left-1/2 -translate-x-1/2"></div>
       
       <div className="container-custom relative z-10">

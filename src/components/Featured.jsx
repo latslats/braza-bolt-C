@@ -20,7 +20,7 @@ const features = [
 
 export default function Featured() {
   return (
-    <section className="section-padding bg-white relative overflow-hidden">
+    <section id="work" className="section-padding bg-white relative overflow-hidden">
       <div className="creative-shape -top-1/2 -left-1/2"></div>
       <div className="creative-shape -bottom-1/2 -right-1/2"></div>
       

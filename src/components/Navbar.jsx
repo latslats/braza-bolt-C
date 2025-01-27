@@ -16,9 +16,10 @@ export default function Navbar({ toggleDarkMode, isDarkMode }) {
   }, [])
 
   const navLinks = [
-    { name: 'Home', href: '#' },
+    { name: 'Home', href: '#home' },
     { name: 'Services', href: '#services' },
     { name: 'Work', href: '#work' },
+    { name: 'Blog', href: '#blog' },
     { name: 'Contact', href: '#contact' },
   ]
 

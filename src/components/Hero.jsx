@@ -3,7 +3,7 @@ import Stats from './Stats'
 
 export default function Hero() {
   return (
-    <div className="relative overflow-hidden min-h-screen flex items-center bg-gray-50">
+    <div id="home" className="relative overflow-hidden min-h-screen flex items-center bg-gray-50">
       {/* Creative background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="creative-shape top-0 left-0 animate-float"></div>
